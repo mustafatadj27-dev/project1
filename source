@@ -1,0 +1,149 @@
+<!--
+This single-file portfolio is placed in the canvas as `index.html`.
+
+What this file contains:
+- A responsive single-page portfolio built with modern HTML & CSS (no frameworks).
+- Sections: Hero, About, Projects, Skills, Experience, Contact, Footer.
+- Placeholder project cards you can replace with your own projects and links.
+- Comments inside the file explain how to customize, add your resume, and deploy to GitHub Pages.
+
+Files you should add to the same repo (suggested):
+- README.md  -> describe yourself and highlight main projects (I can generate this for you)
+- resume.pdf -> link to from the site
+- /projects/<project-folder> -> each project's README, screenshots, and demo link
+
+Basic git & GitHub steps to publish with GitHub Pages (paste in terminal):
+  git init
+  git add .
+  git commit -m "Initial portfolio"
+  git branch -M main
+  git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+  git push -u origin main
+
+Then enable GitHub Pages in the repo Settings -> Pages -> Source -> Deploy from branch -> main (/root).
+
+Want me to customize this page with your real bio, projects, and colors? Reply with the details and I will update.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Name — Software Developer</title>
+  <meta name="description" content="Portfolio of Your Name — software developer. Projects: web apps, Python, ML, open-source.">
+  <link rel="icon" href="data:,"><style>
+  :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa6b2;--glass:rgba(255,255,255,0.04)}
+  *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+  body{background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);color:#e6eef3;line-height:1.5}
+  .container{max-width:1100px;margin:48px auto;padding:24px}
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+  nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+  .hero{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center;margin-top:36px}
+  h1{font-size:clamp(26px,5vw,38px);margin:0}
+  p.lead{color:var(--muted);margin:12px 0 20px}
+  .cta{display:flex;gap:12px}
+  .btn{background:var(--accent);padding:10px 14px;border-radius:10px;color:#042028;text-decoration:none;font-weight:600}
+  .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+  .profile{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(135deg,#fff2,#fff6);display:block;margin-bottom:12px}
+  section{margin-top:36px}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .project-title{font-weight:700;margin:8px 0}
+  .muted{color:var(--muted);font-size:0.95rem}
+  footer{margin-top:48px;text-align:center;color:var(--muted);font-size:0.95rem}
+  @media(max-width:880px){.hero{grid-template-columns:1fr}nav{display:none}.container{margin:20px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <div style="font-weight:700">Your Name</div>
+          <div class="muted" style="font-size:0.9rem">Software Engineer • Python • Web • Open Source</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Hi — I’m Your Name. I build useful software and open-source tools.</h1>
+        <p class="lead">I design and ship web apps, APIs, and ML prototypes. I love clean architecture, reliable tests, and clear documentation.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn secondary" href="mailto:your.email@example.com">Contact me</a>
+        </div>
+
+        <section id="projects">
+          <h2 style="margin-top:26px">Selected projects</h2>
+          <div class="grid-3">
+            <div class="card">
+              <div class="project-title">Project One</div>
+              <div class="muted">A short 1–2 line description. Tech: React, Node.js, PostgreSQL.</div>
+              <div style="margin-top:10px"><a href="#" class="muted">Live →</a> · <a href="#" class="muted">Code →</a></div>
+            </div>
+            <div class="card">
+              <div class="project-title">Project Two</div>
+              <div class="muted">CLI tool for X. Tech: Python, Click, GitHub Actions.</div>
+              <div style="margin-top:10px"><a href="#" class="muted">PyPI</a> · <a href="#" class="muted">Code →</a></div>
+            </div>
+            <div class="card">
+              <div class="project-title">Project Three</div>
+              <div class="muted">Research demo / visualization. Tech: D3, Flask.</div>
+              <div style="margin-top:10px"><a href="#" class="muted">Demo</a> · <a href="#" class="muted">Code →</a></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills">
+          <h2 style="margin-top:26px">Skills</h2>
+          <div class="card" style="padding:12px">
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <span class="muted">Python</span>
+              <span class="muted">JavaScript</span>
+              <span class="muted">React</span>
+              <span class="muted">Django / Flask</span>
+              <span class="muted">Postgres</span>
+              <span class="muted">Docker</span>
+              <span class="muted">Testing / CI</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="card profile">
+        <div class="avatar"></div>
+        <div style="font-weight:700">Your Name</div>
+        <div class="muted">Senior Software Engineer</div>
+        <div style="margin-top:12px"><a href="resume.pdf" class="btn" download>Download resume</a></div>
+        <div style="margin-top:12px" class="muted">Based in Algeria — open to remote work</div>
+        <div style="margin-top:14px">
+          <a href="https://github.com/YOUR_USERNAME" class="muted">GitHub</a> · <a href="#" class="muted">LinkedIn</a>
+        </div>
+      </aside>
+    </div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">Interested in working together? Email me at <a href="mailto:your.email@example.com">your.email@example.com</a> or open an issue on my GitHub repo.</p>
+      </div>
+    </section>
+
+    <footer>
+      Built with ❤️ • <span class="muted">© Your Name • Last updated: 2025-10-16</span>
+    </footer>
+  </div>
+</body>
+</html>
